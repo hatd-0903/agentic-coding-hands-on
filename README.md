@@ -9,7 +9,7 @@ Repository phục vụ khóa thực hành **Agentic Coding** nội bộ Sun\*. H
 Repository có các branch sau:
 
 - [**`main`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/main) — Tài liệu hướng dẫn và cấu hình Supabase. Học viên clone về, tự khởi tạo project (Next.js, Android, React Native, iOS...) và làm việc trên nhánh này.
-- [**`web/sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web/sample) — Có sẵn các thư mục `.claude`, `.vscode`, `.momorph` chứa specs mẫu của một số màn hình. Dùng để tham khảo khi muốn xem context đầu vào và kết quả mà MoMorph sinh ra trông như thế nào.
+- [**`web-sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web-sample) — Mẫu tham khảo cho Web (Next.js). Có sẵn các thư mục `.claude`, `.vscode`, `.momorph` chứa specs mẫu và code đã generate cho một số màn hình. Dùng để xem context đầu vào và kết quả mà MoMorph sinh ra trông như thế nào.
 
 ## Prerequisites
 
@@ -20,6 +20,8 @@ Repository có các branch sau:
 - [VSCode](https://code.visualstudio.com/) + MoMorph Extension — dùng để xem Figma frame list, copy prompt nhanh. Đặc biệt hữu ích cho mobile dev khi IDE chính (Android Studio, Xcode) không hỗ trợ MoMorph Extension.
 
 ### Suggested Tech Stack
+
+Bạn không bị giới hạn về tech stack — có thể tự do sử dụng bất kỳ framework hay ngôn ngữ nào phù hợp. Tuy nhiên, chúng tôi khuyến nghị các stack sau để có trải nghiệm tốt nhất với MoMorph:
 
 - **Backend (chung):** [Supabase](https://supabase.com/) — Backend-as-a-Service (BaaS) cung cấp database, authentication và real-time features
 - **Web:** Next.js + Cloudflare Workers + TailwindCSS + Supabase
@@ -60,7 +62,7 @@ Sau khi khởi tạo xong, thiết lập git remote trỏ về repository của 
 
 ```sh
 git init    # nếu project chưa có git
-git remote add origin https://github.com/sun-asterisk-internal/agentic-coding-hands-on.git
+git remote add origin git@github.com:sun-asterisk-internal/agentic-coding-hands-on.git
 ```
 
 > **Tại sao cần đặt remote?** MoMorph VSCode Extension cần nhận diện repository để hiển thị Figma file đã liên kết. Đặt remote trỏ về `sun-asterisk-internal/agentic-coding-hands-on` giúp MoMorph hoạt động chính xác.
@@ -132,7 +134,11 @@ Lệnh này sẽ:
 - Thiết lập kết nối MCP server cho AI agent đã chọn
 - Tự động cài đặt MoMorph VSCode Extension (nếu chưa cài). Sau khi cài đặt, mở source code repo trên VSCode → chạy command "MoMorph: Sign In" → click vào biểu tượng MoMorph trên sidebar → bạn sẽ thấy danh sách frame list của Figma file đã liên kết.
 
-> **Lưu ý:** Nếu trong quá trình `momorph init` bạn gặp lỗi `failed to install extension` nhưng init vẫn hoàn tất, hãy tải file VSIX mới nhất và cài extension thủ công theo hướng dẫn tại đây: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
+> **Lưu ý:** Nếu trong quá trình `momorph init` bạn gặp lỗi `failed to install extension` nhưng init vẫn hoàn tất, hãy cài extension thủ công bằng file VSIX có sẵn trong thư mục `resources/`:
+> ```sh
+> code --install-extension resources/vscode-momorph-0.12.4.vsix
+> ```
+> Hoặc tham khảo hướng dẫn chi tiết tại đây: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
 
 ### Bước 6: Lọc màn hình mobile trên MoMorph VSCode Extension
 

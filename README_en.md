@@ -9,7 +9,7 @@ Repository for the Sun\* internal **Agentic Coding** hands-on workshop. Particip
 This repository has the following branches:
 
 - [**`main`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/main) — Documentation and Supabase configuration only. Participants clone this branch and initialize their own project (Next.js, Android, React Native, iOS, etc.).
-- [**`web/sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web/sample) — Contains pre-built `.claude`, `.vscode`, `.momorph` directories with sample specs for several screens. Use this as a reference to see what the input context and MoMorph-generated output look like.
+- [**`web-sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web-sample) — Sample reference for Web (Next.js). Contains pre-built `.claude`, `.vscode`, `.momorph` directories with sample specs and generated code for several screens. Use this to see what the input context and MoMorph-generated output look like.
 
 ## Prerequisites
 
@@ -20,6 +20,8 @@ This repository has the following branches:
 - [VSCode](https://code.visualstudio.com/) + MoMorph Extension — for viewing Figma frame lists and quickly copying prompts. Especially useful for mobile developers whose primary IDE (Android Studio, Xcode) does not support the MoMorph Extension.
 
 ### Suggested Tech Stack
+
+You are not limited to any specific tech stack — feel free to use any framework or language that suits you. However, we recommend the following stacks for the best experience with MoMorph:
 
 - **Backend (common):** [Supabase](https://supabase.com/) — Backend-as-a-Service (BaaS) platform providing database, authentication, and real-time features
 - **Web:** Next.js + Cloudflare Workers + TailwindCSS + Supabase
@@ -60,7 +62,7 @@ After initialization, set up a git remote pointing to the hands-on repository:
 
 ```sh
 git init    # if the project doesn't have git yet
-git remote add origin https://github.com/sun-asterisk-internal/agentic-coding-hands-on.git
+git remote add origin git@github.com:sun-asterisk-internal/agentic-coding-hands-on.git
 ```
 
 > **Why set the remote?** The MoMorph VSCode Extension needs to identify the repository to display the linked Figma file. Pointing the remote to `sun-asterisk-internal/agentic-coding-hands-on` ensures MoMorph works correctly.
@@ -132,7 +134,11 @@ This command will:
 - Set up the MCP server connection for the selected AI agent
 - Automatically install the MoMorph VSCode Extension (if not already installed). After installation, open the repo source code in VSCode → run the "MoMorph: Sign In" command → click on the MoMorph icon in the sidebar → you will see the frame list of the linked Figma file.
 
-> **Note:** If you encounter the `failed to install extension` error during `momorph init` but the init process still succeeds, download the latest VSIX file and install the extension manually by following this guide: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
+> **Note:** If you encounter the `failed to install extension` error during `momorph init` but the init process still succeeds, install the extension manually using the VSIX file included in the `resources/` directory:
+> ```sh
+> code --install-extension resources/vscode-momorph-0.12.4.vsix
+> ```
+> Or refer to the detailed guide here: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
 
 ### Step 6: Filter mobile screens in MoMorph VSCode Extension
 

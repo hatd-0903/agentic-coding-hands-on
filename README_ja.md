@@ -9,7 +9,7 @@ Sun\* 社内向け **Agentic Coding** ハンズオン研修用リポジトリで
 このリポジトリには以下のブランチがあります:
 
 - [**`main`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/main) — ドキュメントと Supabase 設定のみ。受講者はこのブランチをクローンし、自分でプロジェクト（Next.js、Android、React Native、iOS など）を初期化して作業します。
-- [**`web/sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web/sample) — いくつかの画面のサンプルスペックが含まれた `.claude`、`.vscode`、`.momorph` ディレクトリが事前に用意されています。MoMorph が生成する入力コンテキストや出力結果の参考として使用してください。
+- [**`web-sample`**](https://github.com/sun-asterisk-internal/agentic-coding-hands-on/tree/web-sample) — Web（Next.js）のサンプルリファレンス。いくつかの画面のサンプルスペックと生成済みコードが含まれた `.claude`、`.vscode`、`.momorph` ディレクトリが事前に用意されています。入力コンテキストや MoMorph の出力結果を確認する際に使用してください。
 
 ## 前提条件
 
@@ -20,6 +20,8 @@ Sun\* 社内向け **Agentic Coding** ハンズオン研修用リポジトリで
 - [VSCode](https://code.visualstudio.com/) + MoMorph Extension — Figma フレーム一覧の表示やプロンプトの素早いコピーに使用します。メインの IDE（Android Studio、Xcode）が MoMorph Extension をサポートしていないモバイル開発者にとって特に便利です。
 
 ### 推奨技術スタック
+
+技術スタックに制限はありません。お好みのフレームワークや言語を自由にご利用いただけます。ただし、MoMorph で最良の体験を得るために、以下のスタックを推奨します:
 
 - **バックエンド（共通）:** [Supabase](https://supabase.com/) — データベース、認証、リアルタイム機能を提供する Backend-as-a-Service（BaaS）プラットフォーム
 - **Web:** Next.js + Cloudflare Workers + TailwindCSS + Supabase
@@ -60,7 +62,7 @@ cd my-app
 
 ```sh
 git init    # プロジェクトに git がまだない場合
-git remote add origin https://github.com/sun-asterisk-internal/agentic-coding-hands-on.git
+git remote add origin git@github.com:sun-asterisk-internal/agentic-coding-hands-on.git
 ```
 
 > **なぜ remote を設定するのか？** MoMorph VSCode Extension がリポジトリを識別し、連携済みの Figma ファイルを表示するために必要です。remote を `sun-asterisk-internal/agentic-coding-hands-on` に向けることで、MoMorph が正しく動作します。
@@ -132,7 +134,11 @@ momorph init . --ai cursor
 - 選択した AI エージェント用の MCP サーバー接続をセットアップ
 - MoMorph VSCode Extension を自動インストール（未インストールの場合）。インストール後、VSCode でリポジトリのソースコードを開き → "MoMorph: Sign In" コマンドを実行 → サイドバーの MoMorph アイコンをクリック → 連携済み Figma ファイルのフレーム一覧が表示されます。
 
-> **注意:** `momorph init` 実行中に `failed to install extension` エラーが表示されても init 自体が成功している場合は、最新の VSIX ファイルをダウンロードし、次のガイドに従って拡張機能を手動でインストールしてください: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
+> **注意:** `momorph init` 実行中に `failed to install extension` エラーが表示されても init 自体が成功している場合は、`resources/` ディレクトリに含まれる VSIX ファイルを使用して拡張機能を手動でインストールしてください:
+> ```sh
+> code --install-extension resources/vscode-momorph-0.12.4.vsix
+> ```
+> または、こちらの詳細ガイドを参照してください: https://sun-asterisk.enterprise.slack.com/docs/T02CQGZA7MK/F094K2LTV71?focus_section_id=temp:C:USe2e5a076e79fd458c9b713260c
 
 ### ステップ 6: MoMorph VSCode Extension でモバイル画面をフィルタリングする
 
