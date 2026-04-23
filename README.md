@@ -67,11 +67,11 @@ git remote add origin git@github.com:sun-asterisk-internal/agentic-coding-hands-
 
 ### Bước 2: Đăng nhập MoMorph Web và kết nối tài khoản GitHub
 
+> **Lưu ý:** Bài thực hành MoMorph này đã được liên kết sẵn với repository `sun-asterisk-internal/agentic-coding-hands-on`. Bạn chỉ thực hiện kết nối tài khoản GitHub với MoMorph là có thể sử dụng. Tuyệt đối không cập nhật trường **Select Repository** ở bước số 3, kể cả khi nó hiển thị bị trống. Nếu tự ý thay đổi, các thành viên khác sẽ không thể truy cập và thực hành được.
+
 1. Truy cập [MoMorph Web](https://momorph.ai/) và đăng nhập bằng tài khoản Figma (dùng email `*@sun-asterisk.com`).
 2. Điền link file Figma sau để tiếp tục: https://www.figma.com/design/9ypp4enmFmdK3YAFJLIu6C/SAA-2025---Internal-Live-Coding
-3. Vào **Settings → GitHub → Connect** để kết nối tài khoản GitHub của bạn với MoMorph và đặc biệt đảm bảo đã cấp quyền truy cập vào GitHub repository `sun-asterisk-internal/agentic-coding-hands-on` tại bước này.
-
-> **Lưu ý:** Repository này đã được connect sẵn với MoMorph và Figma project trên hệ thống. Bạn chỉ cần kết nối tài khoản GitHub cá nhân với MoMorph là có thể sử dụng.
+3. Vào **Settings → GitHub → Connect** để kết nối tài khoản GitHub của bạn với MoMorph. Tuyệt đối không cập nhật trường **Select Repository**.
 
 ### Bước 3: Cài đặt MoMorph CLI
 
