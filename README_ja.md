@@ -35,9 +35,6 @@ Sun\* 社内向け **Agentic Coding** ハンズオン研修用リポジトリで
 
 1. https://github.com/orgs/sun-asterisk-internal/sso にアクセスします
 2. SSO サインインを完了し、あなたの GitHub アカウントが `sun-asterisk-internal` organization に参加できる状態にします
-3. `sun-asterisk-internal/agentic-coding-hands-on` リポジトリへの招待を受けるため、自分の GitHub ユーザー名を **nguyen.huu.kim** または **le.minh.hoang** に送ってください
-
-> **重要:** リポジトリに招待されていない場合、**MoMorph MCP にアクセスできず** Spec/デザインデータを取得できません。また、後続のステップで **MoMorph VSCode Extension 上の Figma データも表示されません**。次に進む前にこのステップを必ず完了してください。
 
 ### ステップ 1: プロジェクトの初期化
 
@@ -87,6 +84,11 @@ upstream  git@github.com:sun-asterisk-internal/agentic-coding-hands-on.git (push
 1. [MoMorph Web](https://momorph.ai/) にアクセスし、Figma アカウント（`*@sun-asterisk.com` メール）でサインインします。
 2. 次の Figma ファイルリンクを入力して続行します: https://www.figma.com/design/9ypp4enmFmdK3YAFJLIu6C/SAA-2025---Internal-Live-Coding
 3. **Settings → GitHub → Connect** で GitHub アカウントを MoMorph に連携し、この手順で `sun-asterisk-internal/agentic-coding-hands-on` リポジトリへのアクセス権限を付与済みであることを必ず確認してください。
+4. `sun-asterisk-internal/agentic-coding-hands-on` リポジトリへの招待を受けるため、自分の GitHub ユーザー名を **nguyen.huu.kim** または **le.minh.hoang** に送ってください。
+
+> **重要:** リポジトリに招待されていない場合、**MoMorph MCP にアクセスできず** Spec/デザインデータを取得できません。また、後続のステップで **MoMorph VSCode Extension 上の Figma データも表示されません**。次に進む前にこのステップを必ず完了してください。
+>
+> 招待が成功した後、MoMorph Web の **Settings ページをリフレッシュ** すると、**Select Repository** フィールドに `sun-asterisk-internal/agentic-coding-hands-on` が表示され、**disable** 状態になっているのが確認できます。これは正しい・通常の状態です。
 
 > **注意:** このリポジトリはすでにシステム上で MoMorph および Figma プロジェクトと連携されています。個人の GitHub アカウントを MoMorph に連携するだけで使用できます。
 
