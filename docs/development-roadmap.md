@@ -2,6 +2,15 @@
 
 Living record of the project's phases, milestones, and progress.
 
+## Phase: Prelaunch Countdown Page
+
+**Status:** Complete — 2026-07-16
+**Spec:** [docs/features/F002_Prelaunch](./features/F002_Prelaunch/technical-spec.md)
+
+Shipped: the `/` landing route as a prelaunch gate — a fixed 60-second countdown
+(DAYS/HOURS/MINUTES/SECONDS) that auto-redirects to `/login` at zero, localized VN/EN. Build/lint/
+typecheck clean; 25 countdown tests (93 in the full suite). Reviewer 8.5/10.
+
 ## Phase: Authentication & App Entry (Login)
 
 **Status:** Complete — 2026-07-16
