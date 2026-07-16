@@ -6,22 +6,22 @@
  * 4" instances — gradient-glass rectangle + large digit).
  *
  * Consumes `useCountdown` directly (FR-H2) rather than taking values as props,
- * per the integration contract. The design's digits use a "Digital Numbers"
- * 7-segment font not available as a next/font asset — approximated here with
- * bold tabular-nums.
+ * per the integration contract. Digits render as seven-segment LED glyphs via
+ * the shared `SevenSegmentDigit` (same component as the `/` prelaunch page), so
+ * the countdown style matches across screens.
  *
- * `!ready` (server render / first client paint) shows "--" placeholders to
+ * `!ready` (server render / first client paint) shows blank (unlit) cells to
  * avoid a hydration mismatch, since "now" can only be computed client-side.
  */
 import { useCountdown } from "@/lib/home/use-countdown";
 import { useTranslations } from "next-intl";
 
+import { SevenSegmentDigit } from "@/components/countdown/seven-segment-digit";
+
 function DigitBox({ children }: { children: string }) {
   return (
-    <div className="flex h-[62px] w-10 items-center justify-center rounded-lg border border-[#FFEA9E]/50 bg-gradient-to-b from-white/60 to-white/10 backdrop-blur-md sm:h-[72px] sm:w-[46px] lg:h-[82px] lg:w-[51px]">
-      <span className="text-[28px] font-bold leading-none tabular-nums text-white sm:text-[34px] lg:text-[40px]">
-        {children}
-      </span>
+    <div className="flex h-[62px] w-10 items-center justify-center rounded-lg border border-[#FFEA9E]/50 bg-gradient-to-b from-white/60 to-white/10 text-white backdrop-blur-md sm:h-[72px] sm:w-[46px] lg:h-[82px] lg:w-[51px]">
+      <SevenSegmentDigit digit={children} className="h-9 w-auto sm:h-11 lg:h-12" />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
@@ -34,7 +35,17 @@ export default async function RootLayout({
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#00101A]">
+        {/*
+          Global app background (matches the `/` prelaunch page): the colorful
+          organic-root key visual, fixed behind every route, under a strong dark
+          overlay so content stays legible on the long content pages. Hero
+          sections that layer their own key visual simply sit on top of this.
+        */}
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10">
+          <Image src="/assets/home/keyvisual-bg.png" alt="" fill priority className="object-cover" />
+          <div className="absolute inset-0 bg-[#00101A]/88" />
+        </div>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>

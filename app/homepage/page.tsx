@@ -25,11 +25,11 @@ export default function HomePage() {
   const { checking } = useRequireAuth();
 
   if (checking) {
-    return <div className="min-h-screen bg-[#00101A]" aria-hidden="true" />;
+    return <div className="min-h-screen" aria-hidden="true" />;
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#00101A]">
+    <div className="flex min-h-screen flex-col">
       <HomeHeader />
       <main className="flex flex-1 flex-col">
         <HomeHero />

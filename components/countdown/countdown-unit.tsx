@@ -1,6 +1,9 @@
+import { SevenSegmentDigit } from "./seven-segment-digit";
+
 /**
- * Presentational LED-style countdown unit (F002): two glass digit cells plus an
- * uppercase label beneath. Purely presentational — the container pre-pads `value`.
+ * Presentational LED-style countdown unit (F002): two translucent glass cells,
+ * each holding a seven-segment digit, plus an uppercase label beneath. Purely
+ * presentational — the container pre-pads `value`.
  *
  * The two digits are split into separate cells to match the MoMorph LED look and
  * are marked aria-hidden; a combined `aria-label` on the group ("01 MINUTES")
@@ -23,9 +26,9 @@ export function CountdownUnit({ value, label }: CountdownUnitProps) {
         {digits.map((digit, index) => (
           <span
             key={index}
-            className="flex h-16 w-12 items-center justify-center rounded-lg border border-white/10 bg-white/5 font-mono text-4xl font-bold tabular-nums text-white shadow-inner sm:h-20 sm:w-16 sm:text-5xl"
+            className="flex h-16 w-12 items-center justify-center rounded-lg border border-white/25 bg-gradient-to-b from-white/55 to-white/10 text-white backdrop-blur-md sm:h-20 sm:w-16"
           >
-            {digit}
+            <SevenSegmentDigit digit={digit} className="h-10 w-auto sm:h-12" />
           </span>
         ))}
       </div>

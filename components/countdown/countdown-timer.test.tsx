@@ -30,12 +30,14 @@ describe("components/countdown/countdown-timer", () => {
   });
   afterEach(() => vi.useRealTimers());
 
-  it("renders the localized title and four unit labels", () => {
+  it("renders the localized title and three unit labels (no seconds)", () => {
     render(<CountdownTimer />);
     expect(screen.getByText("Sự kiện sẽ bắt đầu sau")).toBeInTheDocument();
-    for (const label of ["NGÀY", "GIỜ", "PHÚT", "GIÂY"]) {
+    for (const label of ["NGÀY", "GIỜ", "PHÚT"]) {
       expect(screen.getByText(label)).toBeInTheDocument();
     }
+    // SECONDS unit dropped to match the design.
+    expect(screen.queryByText("GIÂY")).not.toBeInTheDocument();
   });
 
   it("does not redirect before the countdown completes", () => {

@@ -39,11 +39,11 @@ export default function AwardsPage() {
   }, [checking]);
 
   if (checking) {
-    return <div className="min-h-screen bg-[#00101A]" aria-hidden="true" />;
+    return <div className="min-h-screen" aria-hidden="true" />;
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#00101A]">
+    <div className="flex min-h-screen flex-col">
       <HomeHeader activeKey="awards" />
       <main className="flex flex-1 flex-col">
         <AwardHeroBanner />

@@ -21,7 +21,7 @@ const PARAGRAPH_2 =
 
 export function RootFurtherContent() {
   return (
-    <section className="flex w-full flex-col items-center gap-8 bg-[#00101A] px-6 py-20 sm:px-12 lg:px-26 lg:py-30">
+    <section className="flex w-full flex-col items-center gap-8 px-6 py-20 sm:px-12 lg:px-26 lg:py-30">
       <div className="flex flex-col items-center">
         <Image src="/assets/home/root-text.png" alt="ROOT" width={189} height={67} className="h-auto w-32 sm:w-40" />
         <Image

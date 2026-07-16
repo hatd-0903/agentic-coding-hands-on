@@ -18,7 +18,7 @@ export function KudosSection() {
   const t = useTranslations("home");
 
   return (
-    <section className="w-full bg-[#00101A] px-6 py-16 sm:px-12 lg:px-36">
+    <section className="w-full px-6 py-16 sm:px-12 lg:px-36">
       <div className="relative mx-auto flex w-full max-w-[1224px] flex-col items-start gap-10 overflow-hidden rounded-2xl bg-[#0F0F0F] p-8 sm:p-12 lg:flex-row lg:items-center lg:justify-between lg:p-16">
         <Image src="/assets/home/kudos-background.png" alt="" fill className="object-cover opacity-60" />
 

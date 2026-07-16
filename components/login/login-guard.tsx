@@ -14,7 +14,7 @@ export function LoginGuard({ children }: { children: React.ReactNode }) {
 
   if (checking) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#050a16]">
+      <div className="flex min-h-screen items-center justify-center">
         <span
           role="status"
           aria-label="Loading"

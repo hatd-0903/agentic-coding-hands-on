@@ -13,14 +13,15 @@ const COUNTDOWN_SECONDS = 60;
 
 /**
  * Client countdown container (F002): runs the fixed 60s countdown, renders the
- * localized title + four LED units, and redirects to /login exactly once when the
+ * localized title + the three LED units (DAYS/HOURS/MINUTES, per MoMorph
+ * 8PJQswPZmU — no seconds), and redirects to /login exactly once when the
  * countdown completes (FR-004). The redirect is guarded by a ref so React
  * StrictMode's double-invoked effect (dev) navigates only once (BR-001).
  */
 export function CountdownTimer() {
   const t = useTranslations("countdown");
   const router = useRouter();
-  const { days, hours, minutes, seconds, isComplete } = useCountdown(COUNTDOWN_SECONDS);
+  const { days, hours, minutes, isComplete } = useCountdown(COUNTDOWN_SECONDS);
   const hasRedirected = useRef(false);
 
   useEffect(() => {
@@ -34,7 +35,6 @@ export function CountdownTimer() {
     { key: "days", value: pad2(days), label: t("days") },
     { key: "hours", value: pad2(hours), label: t("hours") },
     { key: "minutes", value: pad2(minutes), label: t("minutes") },
-    { key: "seconds", value: pad2(seconds), label: t("seconds") },
   ];
 
   return (

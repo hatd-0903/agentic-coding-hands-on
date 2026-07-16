@@ -13,7 +13,7 @@ import { LoginHero } from "@/components/login/login-hero";
 export default function LoginPage() {
   return (
     <LoginGuard>
-      <main className="relative min-h-screen bg-[#050a16]">
+      <main className="relative min-h-screen">
         <LoginHeader />
         <LoginHero />
         <LoginFooter />

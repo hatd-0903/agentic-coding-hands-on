@@ -76,7 +76,7 @@ export function AwardsSection() {
   const t = useTranslations("home");
 
   return (
-    <section className="flex w-full flex-col gap-16 bg-[#00101A] px-6 py-20 sm:px-12 lg:px-36">
+    <section className="flex w-full flex-col gap-16 px-6 py-20 sm:px-12 lg:px-36">
       <div className="flex flex-col gap-4">
         <p className="text-base font-bold text-white">{t("awards.caption")}</p>
         <div className="h-px w-full bg-[#2E3940]" />

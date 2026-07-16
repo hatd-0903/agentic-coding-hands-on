@@ -15,7 +15,7 @@ export function HomeFooter() {
   const t = useTranslations("home");
 
   return (
-    <footer className="flex w-full flex-col items-center gap-6 border-t border-[#2E3940] bg-[#00101A] px-6 py-10 sm:flex-row sm:justify-between sm:px-10 lg:px-[90px]">
+    <footer className="flex w-full flex-col items-center gap-6 border-t border-[#2E3940] px-6 py-10 sm:flex-row sm:justify-between sm:px-10 lg:px-[90px]">
       <div className="flex flex-col items-center gap-6 sm:flex-row sm:gap-10 lg:gap-20">
         <Image
           src="/assets/login/sun-annual-awards-logo.png"

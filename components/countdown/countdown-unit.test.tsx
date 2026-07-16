@@ -9,10 +9,10 @@ describe("components/countdown/countdown-unit", () => {
     expect(screen.getByText("DAYS")).toBeInTheDocument();
   });
 
-  it("splits the two digits into separate cells", () => {
-    render(<CountdownUnit value="09" label="HOURS" />);
-    expect(screen.getByText("0")).toBeInTheDocument();
-    expect(screen.getByText("9")).toBeInTheDocument();
+  it("renders the two digits as separate seven-segment cells", () => {
+    const { container } = render(<CountdownUnit value="09" label="HOURS" />);
+    // Each digit is drawn as an SVG (no text glyph), one per cell.
+    expect(container.querySelectorAll("svg")).toHaveLength(2);
   });
 
   it("exposes a combined accessible label for the unit group", () => {
@@ -21,8 +21,8 @@ describe("components/countdown/countdown-unit", () => {
   });
 
   it("defensively pads a single-digit value to two cells", () => {
-    render(<CountdownUnit value="7" label="SECONDS" />);
+    const { container } = render(<CountdownUnit value="7" label="SECONDS" />);
     expect(screen.getByLabelText("07 SECONDS")).toBeInTheDocument();
-    expect(screen.getByText("7")).toBeInTheDocument();
+    expect(container.querySelectorAll("svg")).toHaveLength(2);
   });
 });
