@@ -7,7 +7,7 @@
  * lib/supabase/browser-client.ts) auto-exchanges the `?code=` query param on load.
  * This page just waits for that exchange to resolve into a session, then redirects:
  * - Google returned `?error=...` (denied/cancelled) → `/login?error=oauth` immediately.
- * - Session appears (via `getSession()` or `onAuthStateChange(SIGNED_IN)`) → `/todo`.
+ * - Session appears (via `getSession()` or `onAuthStateChange(SIGNED_IN)`) → `/homepage` (FR-H1).
  * - Neither happens within ~10s → treat as failure → `/login?error=oauth`.
  */
 import { Suspense, useEffect, useRef, useState } from "react";
@@ -39,7 +39,7 @@ function CallbackContent() {
       if (settledRef.current || !isMounted) return;
       settledRef.current = true;
       if (success) {
-        router.replace("/todo");
+        router.replace("/homepage");
       } else {
         setFailed(true);
         router.replace("/login?error=oauth");

@@ -95,3 +95,12 @@ VN default + EN switch persists via `NEXT_LOCALE`; button loading/error states p
 3. Live Google OAuth round-trip: deferred pending Docker + real `GOOGLE_CLIENT_ID`/`GOOGLE_CLIENT_SECRET`. Manual E2E checklist in `reports/tester-260716-1314-login-tests.md`.
 
 **Next:** Live OAuth E2E once real creds + Docker Supabase available.
+
+## Live Verification (2026-07-16 14:27) — hosted Supabase
+
+Verified against hosted project `iwxvaneefsukzvbrgltr.supabase.co` via Playwright — see
+`reports/verification-260716-1427-live-oauth.md`. PASS: client guard redirect, VN default,
+EN-switch persistence, PKCE authorize-URL construction, in-app BR-005 error path. BLOCKED: live
+Google round-trip — Supabase returns `400 Unsupported provider: provider is not enabled`. App-side
+wiring is correct; the hosted project's Google provider must be enabled (dashboard, or
+`supabase config push`) + Google Cloud redirect URI set. No code changes were needed.

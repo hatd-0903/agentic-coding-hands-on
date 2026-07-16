@@ -76,7 +76,7 @@ describe("app/auth/callback/page", () => {
     expect(screen.getByText(/Signing you in/i)).toBeInTheDocument();
   });
 
-  it("should redirect to /todo when session is obtained via getSession", async () => {
+  it("should redirect to /homepage when session is obtained via getSession", async () => {
     mockGetSession.mockResolvedValueOnce({ data: { session: mockSession }, error: null });
 
     render(
@@ -86,11 +86,11 @@ describe("app/auth/callback/page", () => {
     );
 
     await waitFor(() => {
-      expect(mockReplace).toHaveBeenCalledWith("/todo");
+      expect(mockReplace).toHaveBeenCalledWith("/homepage");
     });
   });
 
-  it("should redirect to /todo when SIGNED_IN event is triggered", async () => {
+  it("should redirect to /homepage when SIGNED_IN event is triggered", async () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any -- testing internal callback type
     mockOnAuthStateChange.mockImplementation((callback: any) => {
       setTimeout(() => callback("SIGNED_IN", mockSession), 0);
@@ -104,7 +104,7 @@ describe("app/auth/callback/page", () => {
     );
 
     await waitFor(() => {
-      expect(mockReplace).toHaveBeenCalledWith("/todo");
+      expect(mockReplace).toHaveBeenCalledWith("/homepage");
     });
   });
 

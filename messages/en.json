@@ -16,5 +16,54 @@
   },
   "todo": {
     "placeholder": "Todo — coming soon"
+  },
+  "home": {
+    "nav": {
+      "about": "About SAA 2025",
+      "awards": "Awards Information",
+      "kudos": "Sun* Kudos",
+      "standards": "General Standards"
+    },
+    "hero": {
+      "comingSoon": "Coming soon",
+      "timeLabel": "Time:",
+      "placeLabel": "Venue:",
+      "livestreamNote": "Broadcast live on Livestream"
+    },
+    "countdown": {
+      "days": "DAYS",
+      "hours": "HOURS",
+      "minutes": "MINUTES"
+    },
+    "cta": {
+      "aboutAwards": "ABOUT AWARDS",
+      "aboutKudos": "ABOUT KUDOS"
+    },
+    "awards": {
+      "caption": "Sun* annual awards 2025",
+      "title": "Awards System",
+      "subtitle": "Categories will be awarded to the TOP most outstanding people.",
+      "detail": "Details"
+    },
+    "kudos": {
+      "label": "Recognition movement",
+      "title": "Sun* Kudos",
+      "detail": "Details"
+    },
+    "account": {
+      "profile": "Profile",
+      "signOut": "Sign out",
+      "adminDashboard": "Admin Dashboard",
+      "menuLabel": "Account"
+    },
+    "notifications": {
+      "label": "Notifications"
+    },
+    "widget": {
+      "label": "Quick actions"
+    },
+    "footer": {
+      "copyright": "Copyright Sun* © 2025"
+    }
   }
 }

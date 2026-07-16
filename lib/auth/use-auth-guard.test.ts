@@ -65,7 +65,7 @@ describe("use-auth-guard", () => {
       expect(result.current.checking).toBe(true);
     });
 
-    it("should redirect to /todo when session exists", async () => {
+    it("should redirect to /homepage when session exists", async () => {
       mockGetSession.mockResolvedValueOnce({ data: { session: mockSession }, error: null });
       mockOnAuthStateChange.mockImplementation((callback) => {
         setTimeout(() => callback("SIGNED_IN", mockSession), 0);
@@ -77,7 +77,7 @@ describe("use-auth-guard", () => {
       // Wait for async operations
       await new Promise((resolve) => setTimeout(resolve, 50));
 
-      expect(mockReplace).toHaveBeenCalledWith("/todo");
+      expect(mockReplace).toHaveBeenCalledWith("/homepage");
     });
 
     it("should redirect to custom destination when provided", async () => {

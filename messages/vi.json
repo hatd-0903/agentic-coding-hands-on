@@ -16,5 +16,54 @@
   },
   "todo": {
     "placeholder": "Todo — sắp ra mắt"
+  },
+  "home": {
+    "nav": {
+      "about": "About SAA 2025",
+      "awards": "Awards Information",
+      "kudos": "Sun* Kudos",
+      "standards": "Tiêu chuẩn chung"
+    },
+    "hero": {
+      "comingSoon": "Coming soon",
+      "timeLabel": "Thời gian:",
+      "placeLabel": "Địa điểm:",
+      "livestreamNote": "Tường thuật trực tiếp qua sóng Livestream"
+    },
+    "countdown": {
+      "days": "DAYS",
+      "hours": "HOURS",
+      "minutes": "MINUTES"
+    },
+    "cta": {
+      "aboutAwards": "ABOUT AWARDS",
+      "aboutKudos": "ABOUT KUDOS"
+    },
+    "awards": {
+      "caption": "Sun* annual awards 2025",
+      "title": "Hệ thống giải thưởng",
+      "subtitle": "Các hạng mục sẽ được trao giải theo TOP những người xuất sắc nhất.",
+      "detail": "Chi tiết"
+    },
+    "kudos": {
+      "label": "Phong trào ghi nhận",
+      "title": "Sun* Kudos",
+      "detail": "Chi tiết"
+    },
+    "account": {
+      "profile": "Hồ sơ",
+      "signOut": "Đăng xuất",
+      "adminDashboard": "Admin Dashboard",
+      "menuLabel": "Tài khoản"
+    },
+    "notifications": {
+      "label": "Thông báo"
+    },
+    "widget": {
+      "label": "Thao tác nhanh"
+    },
+    "footer": {
+      "copyright": "Bản quyền thuộc về Sun* © 2025"
+    }
   }
 }

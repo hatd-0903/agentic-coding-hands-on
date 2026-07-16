@@ -5,7 +5,8 @@
  *
  * Enforces the binary auth gate in the browser via the Supabase session:
  * - `useRedirectIfAuthed` — for `/login`: authed session → redirect away (FR-002, BR-002).
- * - `useRequireAuth` — for `/todo`: no session → redirect to login (FR-003, BR-003).
+ * - `useRequireAuth` — for protected pages (`/homepage`, `/todo`): no session →
+ *   redirect to login (FR-003, BR-003, FR-H1).
  *
  * This is UX-level gating, NOT a security boundary (client-only decision, see
  * plans/260716-1143-login-page-supabase/clarifications.md). Both hooks expose
@@ -71,12 +72,12 @@ function useSessionRedirect(shouldRedirect: (session: Session | null) => boolean
   return { checking };
 }
 
-/** For `/login`: an authenticated session redirects away to `to` (default `/todo`). */
-export function useRedirectIfAuthed(to = "/todo"): GuardResult {
+/** For `/login`: an authenticated session redirects away to `to` (default `/homepage`, FR-H1). */
+export function useRedirectIfAuthed(to = "/homepage"): GuardResult {
   return useSessionRedirect((session) => session != null, to);
 }
 
-/** For `/todo`: no session redirects to `to` (default `/login`). */
+/** For protected pages: no session redirects to `to` (default `/login`). */
 export function useRequireAuth(to = "/login"): GuardResult {
   return useSessionRedirect((session) => session == null, to);
 }
