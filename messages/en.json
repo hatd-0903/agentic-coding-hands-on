@@ -65,5 +65,12 @@
     "footer": {
       "copyright": "Copyright Sun* © 2025"
     }
+  },
+  "countdown": {
+    "title": "Event starts in",
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS"
   }
 }

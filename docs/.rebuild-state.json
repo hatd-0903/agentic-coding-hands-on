@@ -5,6 +5,11 @@
       "slug": "Login",
       "status": "implemented",
       "promoted": "2026-07-16"
+    },
+    "F002": {
+      "slug": "Prelaunch",
+      "status": "implemented",
+      "promoted": "2026-07-16"
     }
   },
   "note": "Authored spec layer promoted manually (takumi). Code-derived generated layer (docs/generated Core/Flow) deferred — rebuild-spec requires Python, unavailable on this host."
