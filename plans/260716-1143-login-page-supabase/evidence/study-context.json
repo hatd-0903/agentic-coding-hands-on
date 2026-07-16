@@ -1,0 +1,13 @@
+{
+  "task": "Implement the SAA 2025 Login page (/login): client-only Supabase Google OAuth, cookie-based next-intl VN/EN, client-side auth guard (/login<->/todo), /todo placeholder, and client OAuth callback. Next.js 16 App Router, React 19, Tailwind v4.",
+  "mode": "feature",
+  "acceptanceCriteria": [
+    "SC-002 client guard redirects authed /login to /todo and unauthed /todo to /login",
+    "SC-003 OAuth failure shows localized error and resets the button",
+    "SC-004 language selector persists NEXT_LOCALE and re-renders copy; default VN",
+    "SC-001 login button initiates Google OAuth to the callback (live E2E deferred)"
+  ],
+  "touchpoints": ["app/login", "app/todo", "app/auth/callback", "app/layout.tsx", "components/login", "lib/supabase", "lib/auth", "lib/i18n", "i18n", "messages", "supabase/config.toml"],
+  "blastRadius": "New /login, /todo, /auth/callback routes + locale-aware root layout; no existing feature modified.",
+  "contracts": ["Supabase Auth Google OAuth (PKCE, browser client)", "next-intl cookie NEXT_LOCALE"]
+}
