@@ -1,0 +1,7 @@
+{
+  "commands": [
+    {"command": "npm run build", "exitCode": 0, "status": "pass", "summary": "Next.js 16 production build compiled; routes /login /todo /auth/callback /", "ts": "2026-07-16T06:30:00.000Z"},
+    {"command": "npm run lint", "exitCode": 0, "status": "pass", "summary": "eslint clean — 0 errors, 0 warnings", "ts": "2026-07-16T06:31:00.000Z"},
+    {"command": "npm test", "exitCode": 0, "status": "pass", "summary": "vitest run — 65/65 tests passing across 8 files", "ts": "2026-07-16T06:32:00.000Z"}
+  ]
+}

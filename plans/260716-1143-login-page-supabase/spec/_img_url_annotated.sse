@@ -1,0 +1,3 @@
+event: message
+data: {"result":{"content":[{"type":"text","text":"https://momorph.ai/api/images/9ypp4enmFmdK3YAFJLIu6C/662:14387/6cec9cd213c9b37dcc6ddde85450afb3.png"}]},"jsonrpc":"2.0","id":9}
+

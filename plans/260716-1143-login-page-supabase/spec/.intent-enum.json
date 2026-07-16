@@ -1,0 +1,5 @@
+{
+  "mode": "single",
+  "intents": ["An unauthenticated user signs in via Google OAuth on the /login screen and gains access to the app (redirect to /todo)"],
+  "justification": ""
+}

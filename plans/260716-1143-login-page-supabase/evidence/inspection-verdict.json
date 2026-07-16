@@ -1,0 +1,21 @@
+{
+  "score": 8.5,
+  "criticalCount": 0,
+  "decision": "SEALED",
+  "acceptanceCovered": [
+    "SC-002 client guard redirects authed /login to /todo and unauthed /todo to /login — verified live in browser + unit tests on use-auth-guard",
+    "SC-003 OAuth failure shows localized error and resets the button — component tests cover BR-005 error state",
+    "SC-004 language selector persists NEXT_LOCALE and re-renders copy; default VN — verified live (VN->EN switch) + i18n unit tests",
+    "SC-001 login button initiates Google OAuth to the callback (live E2E deferred) — button/callback wiring unit-tested; live round-trip on manual checklist (needs Docker + real creds)"
+  ],
+  "regressionChecked": [
+    "npm run build compiles all routes",
+    "npm run lint 0 errors/0 warnings",
+    "existing / route unaffected (no Supabase import)",
+    "65/65 vitest tests green after review fixes"
+  ],
+  "contractStatus": "PASS",
+  "refuted": [],
+  "unproven": [],
+  "reachableRegressions": []
+}
