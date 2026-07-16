@@ -1,0 +1,20 @@
+{
+  "login": {
+    "title": {
+      "line1": "ROOT",
+      "line2": "FURTHER"
+    },
+    "subtitle": "Bắt đầu hành trình của bạn cùng SAA 2025.",
+    "tagline": "Đăng nhập để khám phá!",
+    "loginButton": "LOGIN With Google",
+    "oauthError": "Đăng nhập không thành công. Vui lòng thử lại.",
+    "footer": "Bản quyền thuộc về Sun* © 2025",
+    "lang": {
+      "vn": "VN",
+      "en": "EN"
+    }
+  },
+  "todo": {
+    "placeholder": "Todo — sắp ra mắt"
+  }
+}

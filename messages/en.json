@@ -1,0 +1,20 @@
+{
+  "login": {
+    "title": {
+      "line1": "ROOT",
+      "line2": "FURTHER"
+    },
+    "subtitle": "Start your journey with SAA 2025.",
+    "tagline": "Log in to explore!",
+    "loginButton": "LOGIN With Google",
+    "oauthError": "Sign-in failed. Please try again.",
+    "footer": "Copyright Sun* © 2025",
+    "lang": {
+      "vn": "VN",
+      "en": "EN"
+    }
+  },
+  "todo": {
+    "placeholder": "Todo — coming soon"
+  }
+}
