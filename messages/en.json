@@ -66,6 +66,12 @@
       "copyright": "Copyright Sun* © 2025"
     }
   },
+  "awardsPage": {
+    "caption": "Sun* annual awards 2025",
+    "title": "SAA 2025 Awards System",
+    "quantityLabel": "Number of awards:",
+    "prizeLabel": "Award value:"
+  },
   "countdown": {
     "title": "Event starts in",
     "days": "DAYS",

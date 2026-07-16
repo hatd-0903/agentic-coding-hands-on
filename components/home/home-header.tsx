@@ -18,9 +18,14 @@ import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "@/components/login/language-switcher";
 import { AccountMenu } from "./account-menu";
 import { BellIcon } from "./home-icons";
-import { HEADER_NAV_LINKS, HomeNavLink } from "./nav-links";
+import { HEADER_NAV_LINKS, HomeNavLink, type NavKey } from "./nav-links";
 
-export function HomeHeader() {
+/**
+ * @param activeKey which nav item renders in the selected state. Defaults to
+ *   "about" (the homepage IS the "About SAA 2025" destination); the awards page
+ *   passes "awards", etc. — lets the same header serve every SAA page (DRY).
+ */
+export function HomeHeader({ activeKey = "about" }: { activeKey?: NavKey } = {}) {
   const t = useTranslations("home");
 
   return (
@@ -37,7 +42,7 @@ export function HomeHeader() {
 
         <nav className="hidden items-center gap-6 sm:flex lg:gap-8">
           {HEADER_NAV_LINKS.map((item) => (
-            <HomeNavLink key={item.key} item={item} active={item.key === "about"} />
+            <HomeNavLink key={item.key} item={item} active={item.key === activeKey} />
           ))}
         </nav>
       </div>

@@ -9,11 +9,14 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./vitest.setup.ts"],
     exclude: [
-      "node_modules",
-      "dist",
+      "**/node_modules/**",
+      "**/dist/**",
       ".idea",
       ".git",
       ".cache",
+      // Isolated git worktrees carry their own repo + node_modules copy; never
+      // let their test files bleed into this project's suite.
+      ".claude/worktrees/**",
     ],
     include: ["**/*.test.ts", "**/*.test.tsx"],
   },
