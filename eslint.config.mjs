@@ -12,6 +12,13 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Non-app sources — not part of the linted codebase:
+    "node_modules/**",
+    ".claude/**",
+    "plans/**",
+    "docs/**",
+    "supabase/**",
+    "resources/**",
   ]),
 ]);
 
