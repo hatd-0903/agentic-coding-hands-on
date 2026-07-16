@@ -2,6 +2,25 @@
 
 Running record of significant changes, features, and fixes.
 
+## 2026-07-16 — Prelaunch Countdown page (F002)
+
+**Feature spec:** [docs/features/F002_Prelaunch](./features/F002_Prelaunch/technical-spec.md)
+
+### Added
+- `/` landing route — SAA 2025 prelaunch gate: a fixed 60-second countdown (DAYS/HOURS/MINUTES/
+  SECONDS LED-style units) over the event hero, auto-redirecting to `/login` once at zero.
+- `lib/countdown/` — pure `format-countdown` helpers + the `use-countdown` ticking hook.
+- `components/countdown/` — presentational `countdown-unit`, `countdown-hero`, and the
+  `countdown-timer` container (redirect logic).
+- `countdown` next-intl namespace (VN default + EN).
+
+### Changed
+- `app/page.tsx` — replaced the create-next-app starter with the countdown screen.
+
+### Deviations from MoMorph design (per clarifications)
+- Fixed 1-minute countdown instead of an API target datetime; a SECONDS unit added so the minute
+  visibly ticks; simple auto-redirect (no global navigation lock); background is a CSS approximation.
+
 ## 2026-07-16 — Login feature (SAA 2025 Google OAuth)
 
 **Feature spec:** [docs/features/F001_Login](./features/F001_Login/technical-spec.md)

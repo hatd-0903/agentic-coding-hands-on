@@ -16,5 +16,12 @@
   },
   "todo": {
     "placeholder": "Todo — coming soon"
+  },
+  "countdown": {
+    "title": "Event starts in",
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS"
   }
 }

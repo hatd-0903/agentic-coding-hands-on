@@ -16,5 +16,12 @@
   },
   "todo": {
     "placeholder": "Todo — sắp ra mắt"
+  },
+  "countdown": {
+    "title": "Sự kiện sẽ bắt đầu sau",
+    "days": "NGÀY",
+    "hours": "GIỜ",
+    "minutes": "PHÚT",
+    "seconds": "GIÂY"
   }
 }
